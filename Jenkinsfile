@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'g++ -o output_file PES.cpp'
+                    sh 'g++ -o output_ PES.cpp'
                 }
             }
         }
