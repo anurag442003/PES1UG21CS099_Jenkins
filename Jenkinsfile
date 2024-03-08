@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'g++ -o output_ PES.cpp'
+                    sh 'g++ -o output_file PES1UG21CS099.cpp'
                 }
             }
         }
         stage('Test') {
             steps {
                 script {
-                    sh './output_file'
+                    sh './output_file_INVALID'
                 }
             }
         }
