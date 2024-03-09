@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'g++ -o output_file PES1UG21CS099.cpp'
+                    sh 'g++ -o output_file YOUR_SRN-1.cpp'
                 }
             }
         }
@@ -38,3 +38,4 @@ pipeline {
         }
     }
 }
+
