@@ -13,6 +13,7 @@ pipeline {
             steps {
                 script {
                     sh './output_file'
+                }
             }
         }
         stage('Deploy') {
@@ -37,4 +38,3 @@ pipeline {
         }
     }
 }
-
