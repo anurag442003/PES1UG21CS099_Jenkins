@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh '
+                    sh './output_file'
             }
         }
         stage('Deploy') {
