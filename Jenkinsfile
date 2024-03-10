@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    // Compile the .cpp file
                     sh 'g++ -o output_file PES1UG21CS099-1.cpp'
                 }
             }
@@ -12,6 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
+                    // Test the compiled binary
                     sh './output_file'
                 }
             }
