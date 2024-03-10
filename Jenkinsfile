@@ -1,4 +1,4 @@
-pipeline {
+pipeline{
     agent any
     
     stages {
@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Compile the .cpp file
-                    sh 'g++ -o output_file PES1UG21CS099-1.cpp'
+                    sh 'g++ -o output_file YOUR_SRN-1.cpp'
                 }
             }
         }
@@ -39,4 +39,19 @@ pipeline {
             echo 'Pipeline failed!'
         }
     }
+    
+    post {
+        always {
+            script {
+                currentBuild.result = 'FAILURE'
+            }
+        }
+        success {
+            echo 'Pipeline succeeded!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
 }
+
